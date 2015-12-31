@@ -1,0 +1,13 @@
+<% @user_photos.each do |photo_link, author_details| %>
+  <div class='photo-entry'>
+    <div class='photo'>
+      <%= image_tag photo_link %>
+    </div>
+    <div class='author'>
+      <%= link_to author_details[:author_name], person_photos_path(person_id: author_details[:author_id]) %>
+    </div>
+  </div>
+<% end %>
+
+<%= stylesheet_link_tag 'home/photos' %>
+

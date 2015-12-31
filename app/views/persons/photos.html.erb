@@ -1,0 +1,13 @@
+<div>
+  <h1>
+    <%= link_to 'Go to Friends Photos', photos_person_friends_path(person_id: @person_id) %>
+  </h1>
+</div>
+
+<div>
+  <% @user_photos.each do |photo_link| %>
+    <div class='photo'>
+      <%= image_tag photo_link %>
+    </div>
+  <% end %>
+</div>
