@@ -3,7 +3,7 @@ class PersonsController < ApplicationController
   include FlickrResponse
 
   before_action only: :photos do
-    get_response(FLICKR_PUBLIC_PHOTOS_URL, "?user_id=#{ params[:person_id] }")
+    get_response(FLICKR_PUBLIC_PHOTOS_URL, "?id=#{ params[:person_id] }")
   end
   before_action :check_parsed_entries, only: :photos
 
